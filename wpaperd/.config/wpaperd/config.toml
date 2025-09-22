@@ -1,0 +1,5 @@
+[default]
+path = "/home/jr/Pictures/wallpapers/"
+duration = "30m"
+transition-time = 600
+

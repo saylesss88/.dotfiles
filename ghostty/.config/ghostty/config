@@ -1,0 +1,50 @@
+theme = tokyonight
+window-theme = ghostty
+# theme = Dracula+
+command = /usr/bin/nu
+
+##FONTS##
+font-family = "JetBrainsMono Nerd Font"
+font-size = 13
+font-style-bold = "Medium" 
+font-style-bold-italic = "Medium Italic "
+font-thicken = true
+cursor-invert-fg-bg = true
+
+##Mouse##
+mouse-hide-while-typing = true
+# mouse-scroll-multiplier = 1
+##Window##
+gtk-single-instance = true
+gtk-tabs-location = bottom
+gtk-wide-tabs = false
+window-padding-y = 2,0
+window-padding-balance = true
+window-decoration = false
+background-opacity = 0.9
+background-blur = true
+background-blur-radius = 10
+unfocused-split-opacity = 1
+window-padding-balance = true
+
+# shell-integration = zsh
+shell-integration-features = cursor,sudo,no-title
+gtk-titlebar = false
+
+confirm-close-surface = false
+
+##KEYBINDINGS##
+keybind = ctrl+l=goto_split:right
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+shift+|=new_split:right
+keybind = ctrl+shift+_=new_split:down
+keybind = alt+n=new_window
+keybind = alt+t=new_tab
+keybind = alt+]=next_tab
+keybind = alt+[=previous_tab
+
+#Helix these conflict
+keybind = alt+left=unbind
+keybind = alt+right=unbind

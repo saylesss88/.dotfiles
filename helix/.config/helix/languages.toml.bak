@@ -1,0 +1,13 @@
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+formatter = { command = "rustfmt" }
+[language-server.rust-analyzer]
+timeout = 120
+
+[language-server.rust-analyzer.config.cargo]
+features = "all"
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
