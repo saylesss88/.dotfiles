@@ -4,7 +4,8 @@ window-theme = ghostty
 command = /usr/bin/nu
 
 ##FONTS##
-font-family = "JetBrainsMono Nerd Font"
+# font-family = "JetBrainsMono Nerd Font"
+font-family = "FiraCode"
 font-size = 13
 font-style-bold = "Medium" 
 font-style-bold-italic = "Medium Italic "

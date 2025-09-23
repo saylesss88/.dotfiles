@@ -5,6 +5,10 @@ if [ -d "$HOME/.local/bin" ]; then
     export PATH=$HOME/.local/bin:$PATH
 fi
 
+function man() {
+  nvim -c "set ft=man" -c "Man $@"
+}
+
 eval "$(starship init zsh)"
 function set_win_title(){
     echo -ne "\033]0; $USER@$HOST:${PWD/$HOME/~} \007"
@@ -179,6 +183,7 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/bin/ltex-ls/bin:$PATH"
+export MANPAGER='nvim +Man!'
 
 # ZSH_THEME="aussiegeek"
 export EDITOR="hx"

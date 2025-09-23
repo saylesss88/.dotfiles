@@ -95,13 +95,43 @@ LOG_FILE = "/tmp/completion.log"
 name = "git-commit"
 language-servers = ["scls"]
 
+# [[language]]
+# name = "markdown"
+# # formatter = {command = "prettierd", args = ["--parser", "md"]}
+# language-servers = ["marksman", "markdown-oxide", "scls"]
+# formatter = {command = "dprint", args = ["fmt", "--stdin", "md"]}
+# text-width = 80
+# comment-tokens = ["-", "+", "*", "- [ ]", ">"]
 [[language]]
 name = "markdown"
-# formatter = {command = "prettierd", args = ["--parser", "md"]}
-language-servers = ["marksman", "markdown-oxide", "scls"]
-formatter = {command = "dprint", args = ["fmt", "--stdin", "md"]}
-text-width = 80
-# comment-tokens = ["-", "+", "*", "- [ ]", ">"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "markdown", "--prose-wrap", "always"] }
+language-servers = [ { name = "ltex" } ]
+file-types = ["md", "markdown"]
+scope = "source.markdown"
+roots = []
+indent = { tab-width = 4, unit = "    " }
+# Optional: Enable soft wrapping for prose
+soft-wrap = { enable = true }
+#
+[language-server.ltex]
+command = "ltex-ls"
+#
+[language-server.ltex.config.ltex]
+# Set your primary language (e.g., en-US or en-GB)
+language = "en-US"
+# # Optional: Add custom dictionary words
+# [ltex.dictionary."en-US"]
+# add-words = ["your", "custom", "words"]
+# # Optional: Disable specific rules (e.g., for technical writing)
+# disabled = ["GRAMMAR", "TYPOGRAPHY"]
+#
+# # Optional: Also enable for plain text files
+[[language]]
+name = "text"
+language-servers = [ { name = "ltex" } ]
+file-types = ["txt"]
+scope = "source.text"
 
 [language.auto-pairs]
 '(' = ')'
