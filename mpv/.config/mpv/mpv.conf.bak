@@ -1,0 +1,46 @@
+# Use hardware decoding for better performance (VDPAU, VA-API, or Vulkan)
+hwdec=auto
+
+# Use OpenGL as video output driver for modern GPU support and smooth scaling
+# vo=opengl
+vo=gpu
+
+# Enable high quality interpolation for sharp video resizing
+scale=ewa_lanczos
+cscale=ewa_lanczos
+
+# Enable debanding filter to reduce color banding in gradients
+vf=deband
+
+# Enhance contrast and brightness subtly for better visuals
+contrast=1.10
+brightness=0.05
+
+# Enable loudness normalization for consistent audio volume
+audio-normalize-downmix=yes
+
+# Reduce CPU usage by limiting frame dropping (disable frame dropping)
+framedrop=no
+
+# Force window to always appear for audio-only playback
+force-window=yes
+
+# Cache settings to improve playback efficiency
+cache=yes
+cache-secs=30
+demuxer-max-back-bytes=50000000
+demuxer-readahead-secs=20
+
+# Subtitle optimizations
+sub-auto=fuzzy
+sub-font="Arial"
+sub-font-size=36
+sub-color="#FFFFFF"
+sub-shadow-offset=2
+
+# Profiles for low latency playback (optional)
+[low-latency]
+opengl-glfinish=yes
+opengl-swapinterval=0
+
+
