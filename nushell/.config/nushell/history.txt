@@ -1,0 +1,364 @@
+ls
+.config/nushell/
+ls
+y
+hx config.nu
+ls
+z
+$nu.env-path
+hx .config/nushell/env.nu
+hx .config/nushell/config.nu
+z
+z nu
+z .co
+z nu
+z nushell/
+y
+hx config.nu
+y
+sudo pacman -S libpwquality
+sudo pacman -S opendoas
+hx /etc/doas.conf
+sudo hx /etc/doas.conf
+doas pacman -R sudo
+doas chown -c root:root /etc/doas.conf
+doas chmod -c 0400 /etc/doas.conf
+hx timezone.md
+timedatectl list-timezones
+hx timezone.md
+sudo hx /etc/pam.d/system-login
+upd
+z nu
+hx config.nu
+upd
+sudo pacman -Syu
+shutdown
+hx user.js
+man fzf
+ls
+hx .zshrc
+git clone https://github.com/blindFS/topiary-nushell ($env.XDG_CONFIG_HOME | path join topiary)
+hx nushell/config.nu
+z
+.config/helix/
+hx languages.toml
+z nu
+hx config.nu
+z 2n ar
+hx nushell_formatter.md
+hx nushell/config.nu
+sudo pacman -S taplo
+upd
+nvim/
+ls
+y
+nvim
+y
+sudo pacman -S lua-language-server
+nvim
+hx lua/plugins/conform.lua
+nvim
+hx lua/plugins/conform.lua
+nvim lua/plugins/conform.lua
+y
+paru -Syu
+amd_top
+shutdown
+ls
+sudo pacman -S emote
+z hypr
+hx keybinds.conf
+y
+sudo pacman -S grim swappy
+hx keybinds.conf
+grim
+ls
+paru -Syu
+ls
+systemctl list-failed
+man systemctl
+systemctl status list-failed
+/etc/systemd/
+ls
+y
+..
+ls
+sudo hx cleanup.sh
+ls -l ~/.cache
+cat machine-id
+z
+scripts/
+/etc/systemd/system/
+ls
+hx cleanup.service
+...
+sudo hx cleanup.sh
+chmod +x cleanup.sh
+sudo chmod +x cleanup.sh
+./cleanup.sh
+sudo systemctl daemon-reload
+sudo systemctl enable cleanup
+sudo systemctl status cleanup
+ls -l ~/.cache
+cat machine-id
+cat /etc/machine-id
+sudo systemctl status cleanup
+upd
+z hypr
+hx keybinds.conf
+ls
+z hypr
+z .do
+ls
+notes/2nd_brain/
+ls
+notes/2nd_brain/
+mkdir firefox
+firefox/
+ls
+hx hardening_firefox.md
+shutdown
+paru -Syu
+notes/2nd_brain/
+hx hardening_firefox.md
+firefox/
+hx hardening_firefox.md
+hx firefox_fingerprinting.md
+hx hardening_firefox.md
+z
+nix-book/src/nix/
+hx hardening_networking.md
+upd
+z
+z nu
+hx config.nu
+ins clamav
+sudo clamconf -g freshclam.conf > freshclam.conf
+ls
+/etc/clamav/
+ls
+sudo hx clamd.conf
+ls
+z
+paru -S caffeine-ng
+caffeine-ng
+caffeine
+caffeine &
+sudo clamscan --recursive --infected /home/jr
+sudo freshclam
+sudo aa-complain clamd
+touch /var/log/clamav/freshclam.log
+sudo touch /var/log/clamav/freshclam.log
+sudo chmod 600 /var/log/clamav/freshclam.log
+sudo chown clamav /var/log/clamav/freshclam.log<\n>
+/var/lib/clamav/
+ls
+y
+z
+zi
+ls
+z
+z 2n
+firefox/
+.mozilla/firefox/v5kwl3c0.default-release/
+hx user-overrides.js
+hx user.js
+.mozilla/firefox/v5kwl3c0.default-release/
+hx updater.sh
+chmod +x updater.sh
+hx prefsCleaner.sh
+chmod +x prefsCleaner.sh
+.mozilla/firefox/v5kwl3c0.default-release/
+rm user.js
+hx user.js
+hx firefox_fingerprinting.md
+.mozilla/firefox/v5kwl3c0.default-release/
+hx user.js
+sudo clamscan --recursive --infected /home/jr
+btop
+ls
+./updater.sh
+z 2n ar
+hx user-overrides.js
+z
+ls
+rm rethinkDNS.md
+rm user.js
+hx arkenfox.md
+bootctl
+ls /sys/firmware/efi
+sudo pacman -S efitools
+z
+for var in PK KEK db dbx ; do efi-readvar -v $var -o old_${var}.esl ; done
+.dotfiles/
+mkdir -p mpv/.config/mpv
+.mozilla/firefox/v5kwl3c0.default-release/
+hx user.js
+./updater.sh
+hx user-overrides.js
+z
+z 2n ar
+ls
+sudo systemctl status dnsmasq
+sudo systemctl status libvirtd
+sudo systemctl restart libvirtd
+sudo systemctl status libvirtd
+z 2n ar
+sudo virsh net-list --all
+sudo virsh net-start default
+sudo ss -tuln sport = 53
+sudo virsh list --all
+sudo virsh destroy nixos-25.05
+sudo virsh destroy Whonix-Gateway
+z 2n ar
+sudo virsh net-destroy Whonix-External
+sudo virsh net-destroy Whonix-Internal
+sudo virsh net-destroy default
+sudo virsh net-undefine Whonix-Internal
+sudo virsh net-undefine Whonix-External
+sudo virsh undefine Whonix-Gateway --remove-all-storagevirsh
+sudo virsh list --all
+sudo virsh destroy Whonix-Gateway
+sudo virsh undefine Whonix-Gateway
+sudo virsh undefine Whonix-Workstation
+sudo virsh undefine nixos-25.05
+sudo virsh list --all
+cd /var/lib/libvirt/
+ls
+images/
+ls
+rm -rf *
+sudo rm -rf *
+ls
+z
+sudo virsh net-destroy default
+sudo virsh net-list --all
+sudo virsh net-destroy qemu:///system default
+sudo virsh destroy default
+sudo virsh net-undefine default
+sudo virsh net-destroy default
+sudo virsh net-list --all
+sudo hx /etc/dnsmasq.conf
+sudo chattr -i /etc/resolv.conf
+sudo cp /etc/resolv.conf.bak /etc/resolv.conf
+/etc/dnscrypt-proxy/
+sudo mv dnscrypt-proxy.toml.baknew dnscrypt-proxy.toml
+ls
+sudo systemctl umask dnscrypt-proxy
+sudo systemctl enable dnscrypt-proxy
+sudo systemctl unmask dnscrypt-proxy
+sudo systemctl enable dnscrypt-proxy
+sudo systemctl enable dnsmasq
+sudo systemctl start dnsmasq dnscrypt-proxy --now
+sudo hx /etc/resolv.conf
+sudo systemctl status dnscrypt-proxy
+sudo systemctl status dnsmasq
+sudo systemctl stop systemd-resolved
+sudo systemctl disable systemd-resolved
+sudo systemctl restart dnsmasq dnscrypt-proxy
+paru -Syu
+sudo hx /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+ss -lp 'sport = :domain'
+reboot
+ping 9.9.9.9
+upd
+sudo hx /etc/resolv.conf
+sudo cp /etc/resolv.conf.bak /etc/resolv.conf
+sudo chattr +i /etc/resolv.conf
+cat /etc/resolv.conf
+sudo systemctl restart dnsmasq dnscrypt-proxy
+upd
+z nix- sr 
+nix/
+hx hardening_networking.md
+...
+git add .
+git commit -m "Firefox"
+git push -u origin main
+shutdown
+paru -Syu
+.dotfiles/
+ls
+hx .gitconfig.local
+hx ~/.gitconfig
+git st
+git status
+git log
+jj
+z
+.config/
+mkdir wlogout
+wlogout/
+hx style.css
+..
+waybar/wallust/
+ls
+...
+wlogout/
+ls
+.config/hypr/
+ls
+scripts/
+ls
+hx LockScreen.sh
+...
+wlogout/
+hx layout
+z
+git clone git@github.com:saylesss88/flake.git
+flake/home/hypr/
+ls
+cp -r icons/ ~/.config/wlogout/
+z
+.config/wlogout/
+ls
+y
+z
+wlogout
+z hypr
+ls
+y
+..
+nushell/
+ls
+hx config.nu
+$env | table -e
+z nu
+.config/nushell/
+hx config.nu
+ls
+y
+z nu
+hx config.nu
+y
+z nu
+hx config.nu
+z nu
+hx config.nu
+z nu
+.config/nushell/
+hx config.nu
+z nu
+hx config.nu
+z nu
+hx config.nu
+ls
+z nu
+hx config.nu
+ls
+z nu
+hx config.nu
+ls
+ls | table --theme basic
+ls
+z nu
+hx config.nu
+ls
+z
+.dotfiles/
+stow nushell
+ls
+z 2n sto
+.dotfiles/
+ls
+fastfetch

@@ -1,0 +1,13 @@
+[mgr]
+sort_by = "mtime"
+sort_reverse = true
+linemode = "size"
+editor = "hx"
+
+[preview]
+tab_size = 2
+max_width = 2000 
+max_height = 1200
+cache_dir = ""
+image_filter = "triangle"
+image_quality = 75
