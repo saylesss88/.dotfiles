@@ -362,3 +362,17 @@ z 2n sto
 .dotfiles/
 ls
 fastfetch
+hx StowNvim.md
+z nu
+hx env.nu
+z .do
+stow nushell
+ls
+mkdir ~/.local/share/atuin/
+z nu
+cargo install atuin
+atuin init nu | save ~/.local/share/atuin/init.nu
+hx config.nu
+atuin import auto
+.dotfiles/
+stow nushell

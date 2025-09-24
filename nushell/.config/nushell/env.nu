@@ -17,4 +17,12 @@
 # You can remove these comments if you want or leave
 # them for future reference.
 #
+# History configuration
+$env.HISTORY_FILE_SIZE = 5000
+$env.HISTORY_SIZE = 5000
+
+# FZF configurations
+$env.FZF_CTRL_T_OPTS = "--preview 'bat -n --color=always --line-range :500 {}'"
+$env.FZF_ALT_C_OPTS = "--preview 'eza --tree --color=always {} | head -200'"
+
 zoxide init nushell | save -f ~/.zoxide.nu

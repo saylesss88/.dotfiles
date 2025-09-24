@@ -15,6 +15,7 @@ mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
 source ~/.zoxide.nu
+source ~/.local/share/atuin/init.nu
 use std/util "path add"
 path add "~/.local/bin"
 $env.CARGO_HOME = ($env.HOME | path join ".cargo")
