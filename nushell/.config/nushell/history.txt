@@ -376,3 +376,339 @@ hx config.nu
 atuin import auto
 .dotfiles/
 stow nushell
+git add .
+git commit -m "nushell edit"
+git push -u origin main
+privacy-book/src/android/
+Downloads/
+ls
+z
+Pictures/
+ls
+mv screenshot_20250924090425.png orbot.png
+mv orbot.png ~/privacy-book/src/images/
+hx RethinkDNS_Guide.md
+...
+mdbook build
+book/
+cp -r * ~/mako088.github.io/
+z mako
+git add .
+git commit -m "Rethink edits"
+git push -u origin main
+z priv
+git add .
+git commit -m "Rethink edits"
+git push -u origin main
+src/android/
+hx RethinkDNS_Guide.md
+..
+arch/
+hx enc_install.md
+...
+mdbook build
+book/
+cp -r * ~/mako088.github.io/
+z mako
+git add .
+git commit -m "Line breaks and arch edit"
+git push -u origin main
+z 2
+ls
+privacy-book/src/
+ls
+y
+hx opsec_manual.md
+z 2n
+hx threat_modeling.md
+hx threat-modeling.md
+hx README.md
+z
+z 2n
+hx escape_the_botnet.me
+hx escape_the_botnet.md
+z
+privacy-book/src/
+hx README.md
+ls
+z nix-
+src/
+hx SUMMARY.md
+..
+mdbook build
+.mozilla/firefox/v5kwl3c0.default-release/
+z
+.mozilla/firefox/v5kwl3c0.default-release/
+hx user-overrides.js
+z
+man stow
+z nu
+y
+..
+yazi/
+ls
+hx yazi.toml
+$env.buffer_editor
+z nu
+hx config.nu
+y
+z nu
+hx config.nu
+upd
+y
+sudo pacman -Rns vi
+y
+z nu
+hx config.nu
+y
+hx --version
+.config/kitty/
+ls
+hx kitty.conf
+y
+z nu
+hx config.nu
+y
+z hypr
+hx keybinds.conf
+z
+.config/kitty/
+ls
+y
+.config/ghostty/
+hx config
+ghostty
+z hypr
+hx keybinds.conf
+ls
+y
+.config/hypr/
+ls
+y
+hx env_vars.conf
+y
+z
+ls
+.config/
+ls
+ls -al
+..
+ls -al
+hx .zshrc
+source .zshrc
+ls
+.config/ghostty/
+hx config
+ls
+y
+$env.buffer_editor=hx
+y
+fd 'EDITOR'
+fd 'EDITOR' .
+env | where name == "EDITOR"
+$env | where name == "EDITOR"
+y
+ls
+y
+hx .profile
+z nu
+hx config.nu
+z
+rg 'EDITOR'
+z hypr
+rg 'EDITOR'
+y
+hx hyprstart
+ls
+y
+reboot
+y
+rg 'vi' .zshrc
+z hypr
+rg 'vi' .
+rg 'EDITOR'
+y
+hx env_vars.conf
+y
+ls
+y
+ls
+ghostty +list-themes
+z ghostty
+hx config
+ls
+z ghostty/
+ls
+z ghos
+hx config
+z ghos
+ghostty +list-themes
+hx config
+z ghost
+/usr/share/ghostty/themes/
+ls
+hx config
+ls
+z ghost
+hx config
+ls
+z
+z ghost
+hx config
+z ghost
+hx config
+ls
+.config/mpv/
+ls
+hx mpv.conf
+mpv https://www.youtube.com/watch?v=hjPKXBYxTWM&pp=ygUgY2hyaXMgdGl0dXMgdGVjaCBwcml2YWN5IGJyb3dzZXI%3D
+nix-book/src/nix/
+z
+privacy-book/src/
+ls
+arch/
+ls
+z 2
+ls
+hx hardening_networking.md
+...
+git add .
+git commit -m "Resources"
+git push -u origin main
+sudo hx /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+ls
+/etc/dnscrypt-proxy/
+ls
+hx dnscrypt-proxy.toml.bak
+mv dnscrypt-proxy.toml.bak ~
+sudo mv dnscrypt-proxy.toml.bak ~
+z
+mv dnscrypt-proxy.toml.bak dnscrypt.toml
+hx enc_dns.md
+...
+mdbook build
+book/
+cp -r * ~/mako088.github.io/
+z mako
+git add .
+git commit -m "Intro and Encrypted DNS"
+git push -u origin main
+hx dnscrypt.toml
+privacy-book/src/arch/
+hx dnscrypt.toml
+hx enc_dns.md
+z
+nix-book/src/nix/
+hx hardening_networking.md
+z hypr
+ls
+hx hypridle.conf
+ins swaylock
+swaylock -f -i `/home/jr/Pictures/wallpapers/Aesthetic Scenery.jpg`
+hypridle
+systemctl hibernate
+z .do
+ls
+stow hypr
+hx hypridle.conf
+sudo blkid /dev/nvme0n1p3
+z 2n
+ls
+y
+z
+.mozilla/firefox/v5kwl3c0.default-release/
+hx user-overrides.js
+z 2n
+firefox/
+z
+.mozilla/firefox/v5kwl3c0.default-release/
+hx user-overrides.js
+./updater.sh
+hx hardening_firefox.md
+z 2n ar
+hx arkenfox.md
+z
+.mozilla/firefox/v5kwl3c0.default-release/
+hx hardening_firefox.md
+z
+privacy-book/src/
+hx SUMMARY.md
+..
+mdbook build
+y
+mdbook build
+book/
+cp -r * ~/mako088.github.io/
+z mako
+git add .
+git commit -m "hardening firefox"
+git push -u origin main
+z 2n ar
+..
+firefox/
+hx hardening_firefox.md
+shutdown
+paru -Syu
+sudo hx /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+sudo hx /etc/dnsmasq.conf
+.mozilla/firefox/v5kwl3c0.default-release/
+hx user-overrides.js
+./updater.sh
+z
+sudo hx /etc/dnsmasq.conf
+sudo pacman -S unbound
+sudo hx /etc/unbound/unbound.conf
+sudo systemctl restart dnscrypt-proxy
+sudo systemctl status dnsmasq
+sudo systemctl disable --now dnsmasq
+upd
+sudo systemctl enable unbound
+sudo systemctl start unbound --now
+upd
+sudo systemctl status dnsmasq
+sudo systemctl enable dnsmasq
+upd
+sudo systemctl start dnsmasq --now
+upd
+sudo systemctl status unbound
+sysctl net.core.rmem_max net.core.wmem_max
+sudo sysctl -w net.core.rmem_max=4194304<\n>sudo sysctl -w net.core.wmem_max=4194304
+echo -e "net.core.rmem_max=4194304\nnet.core.wmem_max=4194304" | sudo tee /etc/sysctl.d/99-unbound.conf
+upd
+sudo systemctl status unbound
+dig @127.0.0.1 -p 5333 archlinux.org
+dig @127.0.0.1 -p 5353 archlinux.org
+sudo hx /etc/unbound/unbound.conf
+sudo systemctl restart unbound
+sudo systemctl status unbound
+upd
+sudo journalctl -u unbound -n 50
+upd
+cat /etc/resolv.conf
+sudo mkdir -p /etc/NetworkManager/conf.d
+echo -e "[main]\ndns=none" | sudo tee /etc/NetworkManager/conf.d/dns.conf
+sudo hx /etc/resolv.conf
+/etc/
+ls
+cat resolv.conf.bak
+sudo hx /etc/resolv.conf
+sudo chattr -i /etc/resolv.conf
+sudo hx /etc/resolv.conf
+sudo chattr +i /etc/resolv.conf
+sudo systemctl disable --now dnsmasq
+sudo systemctl disable --now dnscrypt-proxy
+sudo systemctl disable --now unbound
+upd
+ping 9.9.9.9
+dig @127.0.0.1 -p 5353 archlinux.org
+sudo systemctl enable systemd-networkd
+sudo systemctl disable systemd-networkd
+sudo systemctl enable systemd-resolved
+dig @127.0.0.1 -p 5353 archlinux.org
+upd
+sudo systemctl status dnsmasq
+sudo systemctl status dnscrypt-proxy
+sudo systemctl restart libvirtd
+sudo systemctl status libvirtd
+sudo virsh net-list --all
+sudo virsh -c qemu:///system net-autostart default

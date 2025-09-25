@@ -1,7 +1,9 @@
-theme = tokyonight
+# theme = /usr/share/themes/"Cobalt Neon"
 window-theme = ghostty
-# theme = Dracula+
+theme = TokyoNight
+theme = "Cobalt Neon"
 command = /usr/bin/nu
+# command = /usr/bin/zsh
 
 ##FONTS##
 # font-family = "JetBrainsMono Nerd Font"

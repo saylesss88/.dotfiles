@@ -7,7 +7,7 @@ export XCURSOR_SIZE=24
 
 # text editor
 export MICRO_TRUECOLOR=1
-export EDITOR=/usr/bin/nvim
+export EDITOR=/usr/bin/hx
 
 #browser
 export BROWSER=zen-browser
