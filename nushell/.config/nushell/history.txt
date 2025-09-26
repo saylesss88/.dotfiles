@@ -712,3 +712,321 @@ sudo systemctl restart libvirtd
 sudo systemctl status libvirtd
 sudo virsh net-list --all
 sudo virsh -c qemu:///system net-autostart default
+.config/nushell/
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+cd
+cd notes/2nd_brain/arch/
+cp pkglist.txt ~/.dotfiles/
+z
+paru -Syu
+reboot
+sudo pacman -S atuin
+.dotfiles/
+hx pkglist.txt
+helix pkglist.txt
+mkdir ~/.local/share/atuin/
+atuin init nu | save ~/.local/share/atuin/init.nu
+zoxide init nushell | save -f ~/.zoxide.nu
+source ~/.zoxide.nu
+ls
+gpg --full-generate-key
+gpg --experd --edit-key 7DAB43A14FA87762332D0E92F0F7294F2345CCBF
+gpg --expert --edit-key 7DAB43A14FA87762332D0E92F0F7294F2345CCBF
+gpg --output revoke.asc --gen-revoke 7DAB43A14FA87762332D0E92F0F7294F2345CCBF
+gpg --list-secret-keys --with-keygrip --keyid-format LONG
+.gnupg/
+ls
+helix sshcontrol
+ssh-add -L
+source ~/.zshrc
+source $"($nu.home-path)/.cargo/env.nu"
+z
+.dotfiles/
+mkdir -p etc/keyd
+ls
+opendoas --version
+z 2n ar
+z
+notes/2nd_brain/arch/
+ls
+y
+sudo hx /etc/doas.conf
+doas -C /etc/doas.conf
+sudo -C /etc/doas.conf
+doas -C /etc/doas.conf
+su -
+su - jr
+doas chown -c jr:jr /etc/doas.conf
+doas -C /etc/doas.conf
+doas chown -c root:root /etc/doas.conf
+ls /etc/doas.conf
+ls -al /etc/doas.conf
+cat /etc/doas.conf
+paru -Syu
+su -
+pkexec chown root:root /etc/doas.conf
+paru -Syu
+z .do
+cat /etc/doas.conf
+paru -Syu
+z 2n ar
+sudo hx /etc/doas.conf
+z 2n ar
+hx
+sudo hx /etc/keyd/default.conf
+sudo keyd reload
+sudo systemctl enable keyd
+sudo systemctl start keyd --now
+sudo keyd reload
+hx
+.dotfiles/
+ls
+ls -al
+y
+paru -Syu
+hx arch_doas.md
+hx arch_doas.md
+z
+privacy-book/src/arch/
+lsblk
+hx enc_install.md
+z 2n ar
+hx enc_swap_automate.md
+z
+privacy-book/src/arch/
+sudo pacman -S emote
+hx enc_install.md
+...
+mdbook build
+book/
+cp -r * ~/mako088.github.io/
+z mako
+z
+mako088.github.io/
+git add .
+git commit -m "enc install edit"
+git push -u origin main
+privacy-book/src/arch/
+hx enc_install.md
+...
+mdbook build
+book/
+cp -r * ~/mako088.github.io/
+z mako
+git add .
+git commit -m "enc install disk nvme0n1"
+git push -u origin main
+z
+privacy-book/src/arch/
+sudo localectl list-keymaps
+hx enc_install.md
+...
+mdbook build
+book/
+cp -r * ~/mako088.github.io/
+z mako
+git add .
+git commit -m "re-number"
+git push -u origin main
+paru -Syu
+pwgen --version
+sudo pacman -S pwgen
+z .do
+hx pkglist.txt
+z 2 a
+ls
+z
+.config/helix/
+hx languages.toml
+paru -S ltex-ls-bin
+hx --health
+paru -S codelldb
+z
+z 2
+hx metadata.md
+shutdown
+upd
+sudo pacman -S bitwarden
+hx .dotfiles/pkglist.txt
+sudo pacman -S libpwquality
+sudo hx /etc/pam.d/passwd
+sudo hx /etc/default/grub
+sudo update-grub
+sudo hx /usr/sbin/update-grub
+chmod +x /usr/sbin/update-grub
+sudo chmod +x /usr/sbin/update-grub
+sudo chown root:root /usr/sbin/update-grub
+sudo chmod 755 /usr/sbin/update-grub
+sudo update-grub
+z 2 a
+hx update-grub.md
+ls
+sudo firecfg
+firejail --version
+hx arch_apparmor.md
+z
+privacy-book/src/arch/
+sudo timedatectl set-timezone America/New_York<\n>
+hx enc_install.md
+btop
+sudo hx /etc/pam.d/system-login
+paru -S safe-rm xz
+Downloads/
+gpg --import derivative.asc
+gpg --list-keys
+gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
+z
+nix-book/src/nix/
+ls
+git clone git@github.com:saylesss88/nix-book.git
+nix-book/src/nix/
+gpg --verify Whonix-Xfce-17.4.4.6.Intel_AMD64.qcow2.libvirt.xz.asc Whonix-Xfce-17.4.4.6.Intel_AMD64.qcow2.libvirt.xz
+tar -xvf Whonix-Xfce-17.4.4.6.Intel_AMD64.qcow2.libvirt.xz
+sudo virsh -c qemu:///system net-define Whonix_external*.xml
+sudo virsh -c qemu:///system net-define Whonix_internal*.xml
+sudo virsh -c qemu:///system net-autostart Whonix-External
+sudo virsh -c qemu:///system net-start Whonix-External
+sudo virsh -c qemu:///system net-autostart Whonix-Internal
+sudo virsh -c qemu:///system net-start Whonix-Internal
+sudo virsh -c qemu:///system define Whonix-Gateway*.xml
+sudo virsh -c qemu:///system define Whonix-Workstation*.xml
+sudo mv Whonix-Gateway*.qcow2 /var/lib/libvirt/images/Whonix-Gateway.qcow2
+sudo mv Whonix-Workstation*.qcow2 /var/lib/libvirt/images/Whonix-Workstation.qcow2
+safe-rm Whonix*
+safe-rm -r WHONIX*
+ls
+safe-rm derivative.asc
+sudo firejail --no-profile firefox
+man firejail
+nvim
+sudo pacman -S nvim
+hx .dotfiles/pkglist.txt
+man firejail
+sudo firejail --noprofile firefox
+sudo virsh net-list --all
+zsh
+ls
+shutdown
+paru -Syu
+sudo pacman -S linux-hardened linux-hardened-headers
+sudo update-grub
+uname -r
+pacman -Qs linux-hardened
+grep hardened /boot/grub/grub.cfg
+nix-book/src/nix/
+cp -r * ~/mako088.github.io/
+z mako
+git add .
+git commit -m "resources"
+git push -u origin main
+z
+privacy-book/src/arch/
+hx enc_dns.md
+...
+mdbook build
+book/
+cp -r * ~/mako088.github.io/
+z mako
+git add .
+git commit -m "enc dns note"
+git push -u origin main
+z
+privacy-book/src/arch/
+hx enc_dns.md
+...
+mdbook build
+book/
+cp -r * ~/mako088.github.io/
+z mako
+git add .
+git commit -m "enc dns firefox"
+git push -u origin main
+z
+privacy-book/src/arch/
+z
+.mozilla/firefox/nttl8bup.default-release/
+ls
+hx enc_dns.md
+...
+mdbook build
+book/
+cp -r * ~/mako088.github.io/
+z mako
+git add .
+git commit -m "arkenfox numbered"
+git push -u origin main
+yad --version
+shutdown
+mkinitcpio -p linux-hardened
+sudo mkinitcpio -p linux-hardened
+privacy-book/src/
+hx SUMMARY.md
+..
+mdbook build
+/boot
+ls
+sudo hx /etc/default/grub
+sudo update-grub
+reboot
+paru -Syu
+sudo mkinitcpio -p
+sudo mkinitcpio -P
+sudo hx /etc/mkinitcpio.conf
+sudo mkinitcpio -P
+sudo hx /etc/mkinitcpio.conf
+sudo mkinitcpio -P
+sudo update-grub
+upd
+ls
+libpwquality --version
+sudo pacman -S libpwquality
+/etc/sysctl.d/
+ls
+z 2 a
+sysctl -a | grep fs.protected
+sudo sysctl -a | grep fs.protected
+uname -r
+sudo hx 99-custom.conf
+sudo pacman -S kernel-hardening-checker
+z
+ls
+kernel-hardening-checker -l /proc/cmdline -c /proc/config.gz -s ./params.txt
+sudo kernel-hardening-checker -l /proc/cmdline -c /proc/config.gz -s ./params.txt
+sudo hx /etc/sysctl.d/99-custom.conf
+sudo sysctl --system
+sudo kernel-hardening-checker -l /proc/cmdline -c /proc/config.gz -s ./params.txt
+sudo kernel-hardening-checker -l /proc/cmdline -c /proc/config.gz -s ./params.txt > checker.txt
+ls
+sudo sysctl -a | grep def.tty
+sudo sysctl -a | grep kernel.perf
+hx kernel_hardening.md
+ls
+y
+sudo hx /etc/default/grub
+sudo kernel-hardening-checker -l /proc/cmdline -c /proc/config.gz -s ./params.txt > checker.txt
+sudo kernel-hardening-checker -l /proc/cmdline -c /proc/config.gz -s ./params.txt
+privacy-book/src/arch/
+sudo systcl --system
+sudo sysctl --system
+reboot
+sudo hx /etc/sysctl.d/99-custom.conf
+sudo sysctl --system
+hx 99-custom.conf
+sudo hx /etc/sysctl.d/99-custom.conf
+sudo sysctl --system
+sudo hx /etc/sysctl.d/99-custom.conf
+sudo sysctl --system
+ls
+sudo hx /etc/sysctl.d/99-custom.conf
+upd
+privacy-book/src/arch/
+sudo hx /etc/sysctl.d/99-custom.conf
+z nu
+hx config.nu
+z nu
+hx config.nu
+z nu
+z
+z .co nu
+hx config.nu

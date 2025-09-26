@@ -205,7 +205,8 @@ source $ZSH/oh-my-zsh.sh
 #pokemon-colorscripts --no-title -s -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
 
 # fastfetch. Will be disabled if above colorscript was chosen to install
-fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
+# fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
+fastfetch
 
 # Replace ls with exa
 alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
