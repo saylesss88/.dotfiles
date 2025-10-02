@@ -1030,3 +1030,52 @@ z nu
 z
 z .co nu
 hx config.nu
+ls
+sudo efi-update-keys --db /etc/kernel/secure-boot-certificate.pem
+sudo pacman -S efi-update-key-secureboot
+sudo pacman -S efi-updatevar
+hx uki.md
+helix uki.md
+bootctl
+ls
+hx uki.md
+helix uki.md
+sudo helix /etc/mkinitcpio.conf
+mkdir notes
+notes/
+ls
+2nd_brain/
+ls
+arch/
+ls
+hx secure_boot.md
+/etc/kernel
+ls
+hx uki.conf
+helix uki.conf
+helix secure_boot.md
+shutdown
+up
+sudo pacman -Syu
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth --now
+git clone https://aur.archlinux.org/paru-bin.git
+cd paru-bin/
+makepkg -si
+z
+cd .config/nushell/
+ls
+hx config.nu
+helix config.nu
+zoxide init nushell | save -f ~/.zoxide.nu
+z
+atuin init nu | save ~/.local/share/atuin/init.nu
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup toolchain install stable
+cargo --version
+hx .zshrc
+source ~/.zshrc
+hz
+z nu
+.config/nushell
+hx config.nu

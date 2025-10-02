@@ -105,21 +105,59 @@ language-servers = ["scls"]
 [[language]]
 name = "markdown"
 auto-format = true
-formatter = { command = "prettier", args = ["--parser", "markdown", "--prose-wrap", "always"] }
-language-servers = [ { name = "ltex" } ]
+formatter = {command = "prettier", args = [
+	"--parser",
+	"markdown",
+	"--prose-wrap",
+	"always",
+]}
+language-servers = ["marksman", "markdown-oxide", "harper-ls"]
 file-types = ["md", "markdown"]
 scope = "source.markdown"
 roots = []
-indent = { tab-width = 4, unit = "    " }
+indent = {tab-width = 4, unit = "    "}
 # Optional: Enable soft wrapping for prose
-soft-wrap = { enable = true }
+soft-wrap = {enable = true}
 #
-[language-server.ltex]
-command = "ltex-ls"
+
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+[language-server.harper-ls.config.harper-ls]
+userDictPath = ""
+workspaceDictPath = ""
+fileDictPath = ""
+diagnosticSeverity = "hint"
+isolateEnglish = false
+dialect = "American"
+maxFileLength = 120000
+ignoredLintsPath = []
+
+[language-server.harper-ls.config.harper-ls.linters]
+SpellCheck = true
+SpelledNumbers = false
+AnA = true
+SentenceCapitalization = true
+UnclosedQuotes = true
+WrongQuotes = false
+LongSentences = true
+RepeatedWords = true
+Spaces = true
+Matcher = true
+CorrectNumberSuffix = true
+
+[language-server.harper-ls.config.harper-ls.codeActions]
+ForceStable = false
+
+[language-server.harper-ls.config.harper-ls.markdown]
+IgnoreLinkTitle = false
+
+# [language-server.ltex]
+# command = "ltex-ls"
 #
-[language-server.ltex.config.ltex]
-# Set your primary language (e.g., en-US or en-GB)
-language = "en-US"
+# [language-server.ltex.config.ltex]
+# # Set your primary language (e.g., en-US or en-GB)
+# language = "en-US"
 # # Optional: Add custom dictionary words
 # [ltex.dictionary."en-US"]
 # add-words = ["your", "custom", "words"]
@@ -129,7 +167,7 @@ language = "en-US"
 # # Optional: Also enable for plain text files
 [[language]]
 name = "text"
-language-servers = [ { name = "ltex" } ]
+language-servers = [{name = "ltex"}]
 file-types = ["txt"]
 scope = "source.text"
 

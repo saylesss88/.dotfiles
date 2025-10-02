@@ -273,6 +273,7 @@ alias lt='ls --tree'
 alias y='yazi'
 alias upd='sudo pacman -Syu'
 alias ins='sudo pacman -S'
+alias hz='hx $(fzf)'
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
@@ -284,11 +285,15 @@ export MCFLY_RESULTS=20
 export MCFLY_INTERFACE_VIEW=BOTTOM
 export MCFLY_RESULTS_SORT=LAST_RUN
 export EDITOR=hx
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 GPG_TTY=$(tty)
 export GPG_TTY
- export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
- gpgconf --launch gpg-agent
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
 
 
 HISTFILE=~/.zsh_history

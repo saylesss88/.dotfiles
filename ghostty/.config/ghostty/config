@@ -1,7 +1,7 @@
 # theme = /usr/share/themes/"Cobalt Neon"
 window-theme = ghostty
-theme = TokyoNight
-theme = "Cobalt Neon"
+theme = "TokyoNight"
+# theme = "Cobalt Neon"
 command = /usr/bin/nu
 # command = /usr/bin/zsh
 

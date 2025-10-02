@@ -27,7 +27,6 @@ ghostty
 git
 grub
 gvfs
-hunspell-en_us
 hypridle
 hyprland
 hyprlock
@@ -109,3 +108,10 @@ atuin
 pwgen
 bitwarden
 nvim
+emote
+usbguard
+fail2ban
+nftables
+hunspell-en_us
+harper
+rsync
