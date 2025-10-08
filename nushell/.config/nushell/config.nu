@@ -27,10 +27,12 @@ $env.TOPIARY_CONFIG_FILE = ($env.XDG_CONFIG_HOME | path join topiary languages.n
 $env.TOPIARY_LANGUAGE_DIR = ($env.XDG_CONFIG_HOME | path join topiary languages)
 $env.FZF_DEFAULT_OPTS = '--height 40% --tmux bottom,40% --layout reverse --border top'
 $env.FZF_CTRL_T_OPTS = '--walker-skip .git,node_modules,target --preview "bat -n --color=always {}"--bind 'ctrl-/:change-preview-window(down|hidden|)''
+# Aliases
 alias y = yazi
 alias upd = sudo pacman -Syu
+alias up = paru -Syu
 alias ins = sudo pacman -S
-alias c = zi
+alias del = sudo pacman -Rs
 
 # starship prompt
 mkdir ($nu.data-dir | path join "vendor/autoload")

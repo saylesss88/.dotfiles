@@ -115,3 +115,5 @@ nftables
 hunspell-en_us
 harper
 rsync
+clamav
+keepassxc
