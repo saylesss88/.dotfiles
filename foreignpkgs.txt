@@ -1,0 +1,9 @@
+aide 0.19.2-1
+caffeine-ng 4.2.0-2
+librewolf-bin 1:143.0.4_1-2
+paru-bin 2.1.0-1
+paru-bin-debug 2.1.0-1
+rose-pine-hyprcursor v0.3.2.r0.d2c0e680-1
+usbguard-notifier-git 0.1.0.16.g559f9fb-1
+nwg-drawer
+nwg-launchers

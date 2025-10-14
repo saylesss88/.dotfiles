@@ -50,6 +50,7 @@ lua-language-server
 mako
 man-db
 marksman
+markdownlint-cli
 mat2
 mcfly
 mesa-utils
@@ -117,3 +118,8 @@ harper
 rsync
 clamav
 keepassxc
+dnsperf
+rust-analyzer
+inetutils
+traceroute
+xdg-user-dirs
