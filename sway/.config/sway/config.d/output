@@ -15,6 +15,17 @@
 ## Remove the hidpi_1.5.sh script below and configure
 ## the outputs according to your preference.
 ##
-exec_always ~/.config/sway/scripts/hidpi_1.5.sh
+# exec_always ~/.config/sway/scripts/hidpi_1.5.sh
 
 
+output DP-1 {
+  mode 3840x2160@65Hz
+  scale 1.5
+  pos 0 0
+}
+
+output HDMI-A-1 {
+  mode 1920x1080@100Hz
+  scale 1
+  pos 2560 0
+}

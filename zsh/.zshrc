@@ -246,6 +246,8 @@ alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git package
 alias ip='ip -color'
 
 # Get fastest mirrors
+alias reflect="reflector -c US --protocol https --age 6 --fastest 10 --sort rate --save /etc/pacman.d/mirrorlist"
+
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
@@ -272,9 +274,11 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 # Set-up icons for files/directories in terminal using lsd
 alias lt='ls --tree'
 alias y='yazi'
+alias up='paru -Syu'
 alias upd='sudo pacman -Syu'
 alias ins='sudo pacman -S'
 alias hz='hx $(fzf)'
+alias nvim='flatpak run io.neovim.nvim'
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)

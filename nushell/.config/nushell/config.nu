@@ -33,6 +33,7 @@ alias upd = sudo pacman -Syu
 alias up = paru -Syu
 alias ins = sudo pacman -S
 alias del = sudo pacman -Rs
+alias nvim = flatpak run io.neovim.nvim
 
 # starship prompt
 mkdir ($nu.data-dir | path join "vendor/autoload")
