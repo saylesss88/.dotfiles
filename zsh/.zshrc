@@ -278,7 +278,7 @@ alias up='paru -Syu'
 alias upd='sudo pacman -Syu'
 alias ins='sudo pacman -S'
 alias hz='hx $(fzf)'
-alias nvim='flatpak run io.neovim.nvim'
+# alias nvim='flatpak run io.neovim.nvim'
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)

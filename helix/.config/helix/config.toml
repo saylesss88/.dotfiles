@@ -1,8 +1,8 @@
 # theme = "catppuccin_mocha"
 # theme = "tokyonight_moon"
-# theme = "dracula"
+theme = "dracula"
 # theme = "base16_transparent"
-theme = "kanagawa"
+#theme = "kanagawa"
 
 [editor]
 line-number = "relative"

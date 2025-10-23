@@ -1,0 +1,3 @@
+fakeroot
+meson
+xdg-desktop-portal-gtk
