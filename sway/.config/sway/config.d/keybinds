@@ -14,7 +14,8 @@ bindsym {
 	$mod+q kill
 
     # Start your launcher
-    $mod+d exec pkill wofi || wofi --normal-window --show drun --allow-images
+    $mod+d exec $menu
+    # $mod+d exec pkill wofi || wofi --normal-window --show drun --allow-images
     # $mod+d exec wofi --show drun
 
     # Menu

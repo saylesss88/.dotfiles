@@ -1,6 +1,6 @@
 # theme = "catppuccin_mocha"
-# theme = "tokyonight_moon"
-theme = "dracula"
+theme = "tokyonight"
+# theme = "dracula"
 # theme = "base16_transparent"
 #theme = "kanagawa"
 
@@ -18,7 +18,7 @@ rulers = [80]
 bufferline = "multiple"
 jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
 default-yank-register = "+"
-# end-of-line-diagnostics = "hint"
+end-of-line-diagnostics = "hint"
 # shell = ["nu"]
 
 [editor.inline-diagnostics]

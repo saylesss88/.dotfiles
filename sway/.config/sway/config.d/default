@@ -7,6 +7,7 @@
 # ╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝
 #
 # Set Variables
+
 set {
     # Primary mod key.
     # Mod4 is Meta key, Mod1 is Alt.
@@ -24,13 +25,17 @@ set {
     # Application launcher
     $launcher fuzzel
     
+	$rofi_cmd rofi \
+        -terminal '$term'
+
+	$menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
     # Power Menu
     $powermenu ~/.config/sway/scripts/power_menu.sh
 
     # Application menu
-    $menu nwg-drawer
+#    $menu nwg-drawer
     # Set browser
-    $browser brave
+    $browser trivalent
     # Power menu
     $powermenu ~/.config/sway/scripts/power_menu.sh
 }

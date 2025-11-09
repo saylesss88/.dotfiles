@@ -17,6 +17,9 @@
 ##
 # exec_always ~/.config/sway/scripts/hidpi_1.5.sh
 
+output * bg /usr/share/backgrounds/default.jxl fill
+
+
 
 output DP-1 {
   mode 3840x2160@65Hz

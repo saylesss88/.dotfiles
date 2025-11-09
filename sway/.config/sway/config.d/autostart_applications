@@ -1,5 +1,5 @@
 # Auth with polkit-gnome:
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Import environment variables for user systemd service manager
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
@@ -9,9 +9,9 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 # Gnome-keyring
-exec_always --no-startup-id eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-exec_always --no-startup-id export $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-exec_always --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+#exec_always --no-startup-id eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+#exec_always --no-startup-id export $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+#exec_always --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 # Desktop notifications
 exec mako
@@ -21,7 +21,7 @@ exec_always --no-startup-id wpaperd
 exec_always --no-startup-id foot --server
 
 # Autotiling
-exec autotiling
+#exec autotiling
 
 # Launch all Sway applications in autostart directories
 exec dex -a -e sway
@@ -34,10 +34,10 @@ exec wl-paste --type image --watch cliphist store
 # exec kanshi
 
 # nwg-drawer
-exec_always nwg-drawer -r -c 7 -is 90 -mb 10 -ml 50 -mr 50 -mt 10
+#exec_always nwg-drawer -r -c 7 -is 90 -mb 10 -ml 50 -mr 50 -mt 10
 
 # swayrd
-exec_always swayrd
+#exec_always swayrd
 
 # Sway Fader
 #exec python3 ~/.config/sway/scripts/swayfader.py
