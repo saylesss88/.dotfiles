@@ -14,6 +14,12 @@
 #
 # Also see `help config env` for more options.
 #
+let homebrew_bin = ([
+    "/home/linuxbrew/.linuxbrew/bin",
+    "~/.linuxbrew/bin"
+] | where { |path| $path | path exists })
+
+$env.PATH = ($env.PATH | split row (char esep) | prepend $homebrew_bin)
 # You can remove these comments if you want or leave
 # them for future reference.
 #

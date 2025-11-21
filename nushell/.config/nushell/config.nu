@@ -29,11 +29,9 @@ $env.FZF_DEFAULT_OPTS = '--height 40% --tmux bottom,40% --layout reverse --borde
 $env.FZF_CTRL_T_OPTS = '--walker-skip .git,node_modules,target --preview "bat -n --color=always {}"--bind 'ctrl-/:change-preview-window(down|hidden|)''
 # Aliases
 alias y = yazi
-alias upd = sudo pacman -Syu
-alias up = paru -Syu
-alias ins = sudo pacman -S
-alias del = sudo pacman -Rs
 alias nvim = flatpak run io.neovim.nvim
+alias hix = flatpak run com.helix_editor.Helix
+
 
 # starship prompt
 mkdir ($nu.data-dir | path join "vendor/autoload")
@@ -45,4 +43,4 @@ use std/util "path add"
 path add "~/.local/bin"
 $env.CARGO_HOME = ($env.HOME | path join ".cargo")
 path add ($env.CARGO_HOME | path join "bin")
-source $"($nu.home-path)/.cargo/env.nu"
+# source $"($nu.home-path)/.cargo/env.nu"

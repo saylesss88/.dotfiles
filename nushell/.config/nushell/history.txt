@@ -1079,3 +1079,18 @@ hz
 z nu
 .config/nushell
 hx config.nu
+.config/nushell
+ls
+hx config.nu
+brew install atuin
+z
+cd
+atuin init nu | save ~/.local/share/atuin/init.nu
+cargo --version
+ls
+.config/nushell
+ls
+hx config.nu
+hx ~/.zshrc
+hix ~/.zshrc
+hix

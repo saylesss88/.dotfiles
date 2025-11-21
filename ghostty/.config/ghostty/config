@@ -2,7 +2,7 @@
 window-theme = ghostty
 theme = "TokyoNight"
 # theme = "Cobalt Neon"
-#command = /usr/bin/nu
+# command = /usr/bin/nu
 command = /usr/bin/zsh
 
 ##FONTS##
