@@ -13,7 +13,7 @@ block-comment-tokens = [
 	{start = "/**", end = "*/"},
 	{start = "/*!", end = "*/"},
 ]
-language-servers = ["rust-analyzer", "scls"] #, "gpt"]
+language-servers = ["rust-analyzer", "scls", "gpt"] #, "gpt"]
 indent = {tab-width = 4, unit = "    "}
 persistent-diagnostic-sources = ["rustc", "clippy"]
 
@@ -39,10 +39,13 @@ cargo.allFeatures = true
 '<' = '>'
 
 [language.debugger]
-command = "codelldb"
-name = "codelldb"
-port-arg = "--port {}"
-transport = "tcp"
+name = "lldb"
+transport = "local"
+command = "lldb-dap"
+# command = "codelldb"
+# name = "codelldb"
+# port-arg = "--port {}"
+# transport = "tcp"
 
 [[language.debugger.templates]]
 name = "binary"
@@ -95,6 +98,9 @@ LOG_FILE = "/tmp/completion.log"
 name = "git-commit"
 language-servers = ["scls"]
 
+[language-server.gpt]
+command = "helix-gpt"
+
 # [[language]]
 # name = "markdown"
 # # formatter = {command = "prettierd", args = ["--parser", "md"]}
@@ -102,6 +108,9 @@ language-servers = ["scls"]
 # formatter = {command = "dprint", args = ["fmt", "--stdin", "md"]}
 # text-width = 80
 # comment-tokens = ["-", "+", "*", "- [ ]", ">"]
+[language-server.hx-lsp]
+command = "hx-lsp"
+
 [[language]]
 name = "markdown"
 auto-format = true
@@ -111,7 +120,8 @@ formatter = {command = "prettier", args = [
 	"--prose-wrap",
 	"always",
 ]}
-language-servers = ["marksman", "markdown-oxide", "harper-ls"]
+# language-servers = ["marksman", "markdown-oxide", "harper-ls"]
+language-servers = ["marksman", "harper-ls", "hx-lsp", "gpt"]
 file-types = ["md", "markdown"]
 scope = "source.markdown"
 roots = []
@@ -224,13 +234,13 @@ name = "nu"
 auto-format = true
 formatter = {command = "topiary", args = ["format", "--language", "nu"]}
 
-[[language]]
-name = "fish"
-language-servers = ["fish-lsp"]
-indent = {tab-width = 4, unit = "\t"}
-# fish_indent does not use tabs, so we fix it that way
-formatter = {command = "dash", args = ["-c", "fish_indent | sed 's/    /\t/g'"]}
-[language-server.fish-lsp]
-command = "fish-lsp"
-args = ["start"]
-environment = {"fish_lsp_show_client_popups" = "false"}
+# [[language]]
+# name = "fish"
+# language-servers = ["fish-lsp"]
+# indent = {tab-width = 4, unit = "\t"}
+# # fish_indent does not use tabs, so we fix it that way
+# formatter = {command = "dash", args = ["-c", "fish_indent | sed 's/    /\t/g'"]}
+# [language-server.fish-lsp]
+# command = "fish-lsp"
+# args = ["start"]
+# environment = {"fish_lsp_show_client_popups" = "false"}

@@ -1,9 +1,6 @@
-# theme = "catppuccin_mocha"
-# theme = "tokyonight"
-# theme = "dracula"
-# theme = "base16_transparent"
-theme = "kanagawa"
+# theme = "kanagawa"
 # theme = "ayu_dark"
+theme = "tokyonight"
 
 [editor]
 line-number = "relative"

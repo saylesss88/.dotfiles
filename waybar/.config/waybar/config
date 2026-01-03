@@ -8,7 +8,7 @@
     "modules-right": [ "tray", "custom/separator", "backlight", "custom/separator", "battery", "custom/separator", "pipewire", "custom/separator", "clock", "custom/separator","custom/power"],
 
 "custom/launcher": {
-         "format": "   ",
+        "format": "   ",
         "tooltip": false,
         "on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
      },

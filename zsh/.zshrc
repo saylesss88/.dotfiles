@@ -13,6 +13,21 @@ export PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
+# export LANG=en_US.UTF-8
+# export LC_ALL=en_US.UTF-8
+
+if [[ -f /run/.containerenv ]]; then
+    export PROMPT="[arch] %n@%m %~ %# "
+fi
+
+export TERM=xterm-256color
+unset LINES
+unset COLUMNS
+
+# Force prompt redraw
+# precmd() {
+#     zle && zle -R
+# }
 
 # User specific aliases and functions
 if [ -d ~/.zshrc.d ]; then
