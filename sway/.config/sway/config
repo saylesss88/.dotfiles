@@ -4,6 +4,26 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+# exec persway daemon -w -e '[tiling] opacity 1' -f '[tiling] opacity 0.9; opacity 1' -l 'mark --add _prev' --default-layout spiral
+#
+
+exec randpaper --time 10m ~/Pictures/wallpapers
+
+bar {
+    swaybar_command waybar
+}
+
+
+exec persway daemon \
+  -w \
+  -e '[tiling] opacity 1' \
+  -f '[tiling] opacity 0.95; opacity 1' \
+  -l 'mark --add _prev' \
+  --default-layout spiral
+
+# exec wpaperd
+# exec persway daemon -w -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -l 'mark --add _prev' --default-layout spiral
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -35,7 +55,7 @@ set {
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /usr/share/backgrounds/default.jxl fill
+# output * bg /usr/share/backgrounds/default.jxl fill
 
 output DP-1 {
   mode 3840x2160@65Hz
@@ -109,6 +129,8 @@ focus_follows_mouse yes
 # important to make the magic work. And if you want to learn the secret behind
 # the trick, it's all in the `wordexp(3)`.
 #
-include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+# include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 
 include ~/.config/sway/keybinds
+
+include $HOME/.config/sway/config.d/*

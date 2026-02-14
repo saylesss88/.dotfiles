@@ -1,12 +1,13 @@
+@import "/home/jr/.config/randpaper/themes/waybar.css";
 * {
     border: none;
-    font-family: "JetBrainsMono";
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
     font-size: 14px;
 }
 
 window#waybar {
-    background-color: rgba(16, 18, 36, 0.8); /* Dark background (Kanagawa base) */
-    color: #e1e1e1; /* Light gray text */
+    background-color: alpha(@rp_bg, 0.8);
+    color: @rp_fg;
     transition-property: background-color;
     transition-duration: .5s;
     border-radius: 10px;
@@ -36,12 +37,12 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-    background-color: #928374; /* Tan/brown focus */
-    color: #161824; /* Dark text */
+    background-color: @rp_bg;
+    color: @rp_fg;
 }
 
 #workspaces button.urgent {
-    color: #e82424; /* Red urgent */
+    color: @rp_warn; /* Red urgent */
 }
 
 #clock,
@@ -62,13 +63,13 @@ window#waybar.hidden {
 #language {
     padding: 0px 3px;
     margin: 4px 3px 5px 3px;
-    color: #c8c0c0; /* Light gray */
+    color: @rp_fg; /* Light gray */
     background-color: transparent;
 }
 
 #window,
 #workspaces {
-    border: solid 1px #5c5c5c; /* Darker border */
+    border: solid 1px @rp_border; /* Darker border */
     border-radius: 100px;
 }
 
@@ -83,23 +84,23 @@ window#waybar.hidden {
 }
 
 #clock {
-    color: #ff9e64; /* Orange clock */
+    color: @rp_accent; /* Orange clock */
 }
 
 #battery {
-    color: #e82424; /* Red battery */
+    color: @rp_fg; /* Red battery */
 }
 
 @keyframes blink {
     to {
-        background-color: #e1e1e1; /* Light gray blink */
-        color: #161824; /* Dark text blink */
+        background-color: @rp_bg; /* Light gray blink */
+        color: @rp_fg; /* Dark text blink */
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #e82424; /* Red critical battery */
-    color: #161824;
+    background-color: @rp_bg; /* Red critical battery */
+    color: @rp_warn;
 }
 
 label:focus {
@@ -108,27 +109,27 @@ label:focus {
 
 #cpu {
     /* color: #2e3257;  Blue cpu */ 
-    color: #007291;
+    color: @rp_fg;
 }
 
 #memory {
-    color: #9ece6a; /* Green memory */
+    color: @rp_accent; /* Green memory */
 }
 
 #backlight {
-    color: #7aa2f7; /* Light blue backlight */
+    color: @rp_ok; /* Light blue backlight */
 }
 
 #network {
-    color: #627d9a; /* Light Blue network */
+    color: @rp_fg; /* Light Blue network */
 }
 
 #network.disconnected {
-    color: #e82424; /* Red disconnected network */
+    color: @rp_warn;
 }
 
 #pulseaudio {
-    color: #ff9e64; /* Orange pulseaudio */
+    color: @rp_bg; /* Orange pulseaudio */
 }
 
 #pulseaudio.muted {
@@ -136,11 +137,11 @@ label:focus {
 }
 
 #custom-power {
-    color: #7aa2f7; /* Light blue power */
+    color: @rp_fg; /* Light blue power */
 }
 
 #custom-updates {
-    color: #9ece6a; /* Green updates */
+    color: @rp_accent; /* Green updates */
 }
 
 #custom-media {
@@ -166,12 +167,12 @@ label:focus {
 }
 
 #tray {
-    border: solid 1px #89b4fa; /* Light blue tray border */
+    border: solid 1px @rp_border; /* Light blue tray border */
     border-radius: 30px;
 }
 
 #idle_inhibitor {
-    background-color: #303446; /* Darker idle inhibitor */
+    background-color: @rp_bg; /* Darker idle inhibitor */
     border-radius: 15px;
 }
 

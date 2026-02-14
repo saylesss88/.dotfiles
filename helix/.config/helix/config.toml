@@ -1,6 +1,7 @@
+theme = "gruvbox_dark_hard"
 # theme = "kanagawa"
 # theme = "ayu_dark"
-theme = "tokyonight"
+# theme = "tokyonight"
 
 [editor]
 line-number = "relative"

@@ -16,13 +16,22 @@ export PATH
 # export LANG=en_US.UTF-8
 # export LC_ALL=en_US.UTF-8
 
+# if [[ -f /run/.containerenv ]]; then
+#     export PROMPT="[distrobox] %n@%m %~ %# "
+# fi
+
 if [[ -f /run/.containerenv ]]; then
-    export PROMPT="[arch] %n@%m %~ %# "
+    box="${CONTAINER_ID:-${DBS_CONTAINER_NAME:-$HOSTNAME}}"
+    PROMPT="[$box] %n@%m %~ %#"
 fi
 
 export TERM=xterm-256color
 unset LINES
 unset COLUMNS
+
+export EDITOR=hx
+
+export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 # Force prompt redraw
 # precmd() {
@@ -39,3 +48,7 @@ if [ -d ~/.zshrc.d ]; then
 fi
 unset rc
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# slasher-horrorscripts --random

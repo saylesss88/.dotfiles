@@ -4,12 +4,20 @@
 #
 bindsym {
     # Start terminal
+    # $mod+Return split toggle; exec $term
     $mod+Return exec ghostty
     $mod+t exec $term
     # Kill focused window
     $mod+q kill
     # Start launcher
     $mod+d exec $menu
+    $mod+Shift+t exec kitty
+    $mod+Tab exec persway stack-swap-main
+    $mod+Shift+Tab exec persway stack-main-rotate-next
+    # $mod+Shift+n exec pkill -USR1 randpaper
+    $mod+Shift+n exec randpaper ~/Pictures/wallpapers
+    $mod+z exec persway change-layout spiral
+    $mod+x exec persway change-layout stack-main --size 70
     # Launch browser
     $mod+o exec trivalent
     $mod+b exec brave

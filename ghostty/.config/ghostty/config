@@ -4,11 +4,12 @@ theme = "TokyoNight"
 # theme = "Cobalt Neon"
 # command = /usr/bin/nu
 command = /usr/bin/zsh
+config-file = ~/.config/randpaper/themes/ghostty.config
 
 ##FONTS##
 # font-family = "JetBrainsMono Nerd Font"
 font-family = "FiraCode"
-font-size = 13
+font-size = 15
 font-style-bold = "Medium" 
 font-style-bold-italic = "Medium Italic "
 font-thicken = true
@@ -29,6 +30,7 @@ background-blur = true
 background-blur-radius = 10
 unfocused-split-opacity = 1
 window-padding-balance = true
+adjust-cell-height = 0%
 
 # shell-integration = zsh
 shell-integration-features = cursor,sudo,no-title

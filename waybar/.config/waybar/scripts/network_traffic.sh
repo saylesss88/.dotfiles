@@ -7,8 +7,6 @@ isecs=${OPTARG:-1}
 ifaces=($@)
 : ${rate_max:=1000000} # maximum transfer rate for {percent}, can be overridden setting the env var
 
-# `snore` adapted from https://blog.dhampir.no/content/sleeping-without-a-subprocess-in-bash-and-how-to-sleep-forever
-# without MacOS workaround, TODO: with _snore_fd initialized separatedly, also i dont touch IFS so dont bother with it
 snore() {
     local IFS
     [[ -n "${_snore_fd:-}" ]] || { exec {_snore_fd}<> <(:); } 2>/dev/null

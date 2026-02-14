@@ -13,7 +13,7 @@ block-comment-tokens = [
 	{start = "/**", end = "*/"},
 	{start = "/*!", end = "*/"},
 ]
-language-servers = ["rust-analyzer", "scls", "gpt"] #, "gpt"]
+language-servers = ["rust-analyzer"] #, "scls" "gpt"]
 indent = {tab-width = 4, unit = "    "}
 persistent-diagnostic-sources = ["rustc", "clippy"]
 
@@ -21,7 +21,7 @@ persistent-diagnostic-sources = ["rustc", "clippy"]
 check.command = "clippy"
 check.features = "all"
 check.always = true
-cargo.toolchain = "nightly"
+cargo.toolchain = "stable"
 cargo.buildScripts.rebuildOnSave = true
 cargo.buildScripts.enable = true
 cargo.autoreload = true
