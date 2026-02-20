@@ -6,16 +6,18 @@ bindsym {
     # Start terminal
     # $mod+Return split toggle; exec $term
     $mod+Return exec ghostty
-    $mod+t exec $term
+    $mod+t exec footclient
     # Kill focused window
     $mod+q kill
     # Start launcher
     $mod+d exec $menu
-    $mod+Shift+t exec kitty
+    $mod+Shift+t exec kitty -o allow_remote_control=yes --listen-on unix:/tmp/mykitty
+    $mod+Shift+r exec "kitten @ set-colors ~/.config/randpaper/themes/kitty.conf"
     $mod+Tab exec persway stack-swap-main
     $mod+Shift+Tab exec persway stack-main-rotate-next
     # $mod+Shift+n exec pkill -USR1 randpaper
-    $mod+Shift+n exec randpaper ~/Pictures/wallpapers
+    $mod+Shift+n exec randpaper
+    # $mod+Shift+r exec wf-recorder -f ~/randpaper-demo.mp4
     $mod+z exec persway change-layout spiral
     $mod+x exec persway change-layout stack-main --size 70
     # Launch browser

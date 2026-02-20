@@ -7,11 +7,14 @@
 # exec persway daemon -w -e '[tiling] opacity 1' -f '[tiling] opacity 0.9; opacity 1' -l 'mark --add _prev' --default-layout spiral
 #
 
-exec randpaper --time 10m ~/Pictures/wallpapers
+# exec randpaper --time 15m ~/Pictures/wallpapers
+exec randpaper
 
 bar {
     swaybar_command waybar
 }
+
+exec foot --server
 
 
 exec persway daemon \
