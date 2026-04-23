@@ -30,6 +30,8 @@ edit-args = ["-c", '''
 
 [aliases]
 tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
+mb = ["bookmark", "set", "main", "-r", "@"]
+mp = ["bookmark","set", "main","-r","@-"]
 log-recent = ["log", "-r", "default() & recent()"]
 c = ["commit"]
 ci = ["commit", "--interactive"]
@@ -41,9 +43,10 @@ push = ["git", "push", "--allow-new"]
 r = ["rebase"]
 s = ["squash"]
 si = ["squash", "--interactive"]
+la = ["log","-r","all()"]
+ll = ["log","-r","trunk()..@ | (trunk()..main) | trunk() | (trunk()-..trunk())"]
+l =["log","-r","trunk()..@"]
 
 
-[git]
-push-new-bookmarks = true
 
 

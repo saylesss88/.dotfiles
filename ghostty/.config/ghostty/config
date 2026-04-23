@@ -4,7 +4,7 @@ theme = "TokyoNight"
 # theme = "Cobalt Neon"
 # command = /usr/bin/nu
 command = /usr/bin/zsh
-config-file = ~/.config/randpaper/themes/ghostty.config
+# config-file = ~/.config/randpaper/themes/ghostty.config
 
 ##FONTS##
 # font-family = "JetBrainsMono Nerd Font"
