@@ -29,11 +29,23 @@ export TERM=xterm-256color
 unset LINES
 unset COLUMNS
 
+export MANPAGER='nvim +Man!'
+export VISUAL=hx
 export EDITOR=hx
 
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 
-# Force prompt redraw
+# Allow Ctrl-z to toggle between suspend and resume
+function Resume {
+ fg
+ zle push-input
+ BUFFER=""
+ zle accept-line
+}
+zle -N Resume
+bindkey "^Z" Resume
+
+                       # Force prompt redraw
 # precmd() {
 #     zle && zle -R
 # }

@@ -7,13 +7,15 @@ command = /usr/bin/zsh
 # config-file = ~/.config/randpaper/themes/ghostty.config
 
 ##FONTS##
-# font-family = "JetBrainsMono Nerd Font"
-font-family = "FiraCode"
+# font-family = "Noto Sans CJK JP"
+font-family = "IosevkaCharonMono-Regular"
 font-size = 15
 font-style-bold = "Medium" 
 font-style-bold-italic = "Medium Italic "
 font-thicken = true
 cursor-invert-fg-bg = true
+
+image-storage-limit = 320000000
 
 ##Mouse##
 mouse-hide-while-typing = true
@@ -28,6 +30,7 @@ window-decoration = false
 background-opacity = 0.8
 background-blur = true
 background-blur-radius = 10
+image-rendering = pixel
 unfocused-split-opacity = 1
 window-padding-balance = true
 adjust-cell-height = 0%

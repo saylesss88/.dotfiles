@@ -113,7 +113,7 @@ command = "hx-lsp"
 
 [[language]]
 name = "markdown"
-auto-format = true
+auto-format = false
 formatter = {command = "prettier", args = [
 	"--parser",
 	"markdown",

@@ -14,7 +14,7 @@ set +e
 waybar 2>&1 &
 
 # night light
-wlsunset -T 3501 -t 3500 >/dev/null 2>&1 &
+# wlsunset -T 3501 -t 3500 >/dev/null 2>&1 &
 
 # wallpaper
 swaybg -i ~/.config/mango/wallpapers/original-anime-cafe.jpg >/dev/null 2>&1 &
