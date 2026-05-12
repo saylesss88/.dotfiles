@@ -30,8 +30,8 @@ unset LINES
 unset COLUMNS
 
 export MANPAGER='nvim +Man!'
-export VISUAL=hx
-export EDITOR=hx
+export VISUAL=helix
+export EDITOR=helix
 
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 

@@ -2,28 +2,32 @@
 # First param ─┌
 [username]
 format = " [╭─$user]($style)@"
-style_user = "bold red"
-style_root = "bold red"
+style_user = "bold #658594"
+style_root = "bold #658594"
 show_always = true
 
 # Second param
 [hostname]
 format = "[$hostname]($style) in "
-style = "bold dimmed red"
+style = "bold #D27E99"
 trim_at = "-"
 ssh_only = false
 disabled = false
 
 # Third param
 [directory]
-style = "purple"
+style = "#957FB8"
 truncation_length = 0
 truncate_to_repo = true
 truncation_symbol = "repo: "
 
-# Before all the version info (python, nodejs, php, etc.)
+# Before all the version info
+[git_branch]
+symbol = " "
+style = "#658594"
+
 [git_status]
-style = "white"
+style = "#C0A36E"
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
@@ -32,111 +36,109 @@ deleted = "x"
 # Last param in the first line/row
 [cmd_duration]
 min_time = 1
-format = "took [$duration]($style)"
+format = "took [$duration](#DCA561)"
 disabled = false
 
-
 ## SECOND LINE/ROW: Prompt
-# Somethere at the beginning
 [battery]
-full_symbol = " "
-charging_symbol = " "
-discharging_symbol = " "
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
 disabled = true
 
-[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+[[battery.display]]
 threshold = 15
-style = "bold red"
+style = "bold #FF5D62"
 disabled = true
 
-[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+[[battery.display]]
 threshold = 50
-style = "bold yellow"
+style = "bold #C0A36E"
 disabled = true
 
-[[battery.display]]  # "bold green" style when capacity is between 10% and 30%
+[[battery.display]]
 threshold = 80
-style = "bold green"
+style = "bold #98BB6C"
 disabled = true
 
-# Prompt: optional param 1
 [time]
 format = " 🕙 $time($style)\n"
 time_format = "%T"
-style = "bright-white"
+style = "#DCD7BA"
 disabled = true
 
 # Prompt: param 2 └─
 [character]
-success_symbol = " [╰─λ](bold red)"
-error_symbol = " [×](bold red)"
+success_symbol = " [╰─󰣇](bold #658594)"
+error_symbol = " [×](bold #FF5D62)"
+# [character]
+# # success_symbol = " [╰─λ](bold #658594)"
+# success_symbol = " [╰─](bold #658594)[](bold #658594)"
+# error_symbol = " [×](bold #FF5D62)[](bold #FF5D62)"
 
-# SYMBOLS
 [status]
 symbol = "🔴"
 format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
 map_symbol = true
 disabled = false
 
+# SYMBOLS
 [aws]
-symbol = " "
+symbol = " "
 
 [conda]
-symbol = " "
+symbol = " "
 
 [dart]
-symbol = " "
+symbol = " "
 
 [docker_context]
-symbol = " "
+symbol = " "
 
 [elixir]
-symbol = " "
+symbol = " "
 
 [elm]
-symbol = " "
-
-[git_branch]
-symbol = " "
+symbol = " "
 
 [golang]
-symbol = " "
+symbol = " "
 
 [hg_branch]
-symbol = " "
+symbol = " "
 
 [java]
-symbol = " "
+symbol = " "
 
 [julia]
-symbol = " "
+symbol = " "
 
 [nim]
-symbol = " "
+symbol = " "
 
 [nix_shell]
-symbol = " "
+symbol = " "
 
 [nodejs]
-symbol = " "
+symbol = " "
 
 [package]
-symbol = " "
+symbol = " "
 
 [perl]
-symbol = " "
+symbol = " "
 
 [php]
-symbol = " "
+symbol = " "
 
 [python]
-symbol = " "
+symbol = " "
 
 [ruby]
-symbol = " "
+symbol = " "
 
 [rust]
-symbol = " "
+symbol = " "
 
 [swift]
 symbol = "ﯣ "

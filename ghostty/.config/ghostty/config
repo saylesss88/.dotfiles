@@ -8,7 +8,7 @@ command = /usr/bin/zsh
 
 ##FONTS##
 # font-family = "Noto Sans CJK JP"
-font-family = "IosevkaCharonMono-Regular"
+font-family = "IosevkaNerdFontMono-SemiBold.ttf:14"
 font-size = 15
 font-style-bold = "Medium" 
 font-style-bold-italic = "Medium Italic "

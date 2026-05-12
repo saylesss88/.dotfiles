@@ -6,6 +6,7 @@ set +e
 # some env can't auto run the portal, so need this
 /usr/lib/xdg-desktop-portal-wlr  >/dev/null 2>&1 &
 
+systemctl --user start wpaperd.service &
 # notify
 # swaync -c ~/.config/mango/swaync/config.jsonc -s ~/.config/mango/swaync/style.css >/dev/null 2>&1 &
 
@@ -13,13 +14,16 @@ set +e
 # waybar -c ~/.config/mango/waybar/config.jsonc -s ~/.config/mango/waybar/style.css >/dev/null 2>&1 &w
 waybar 2>&1 &
 
+
 # night light
 # wlsunset -T 3501 -t 3500 >/dev/null 2>&1 &
 
 # wallpaper
-swaybg -i ~/.config/mango/wallpapers/original-anime-cafe.jpg >/dev/null 2>&1 &
+# swaybg -i ~/.config/mango/wallpapers/original-anime-cafe.jpg >/dev/null 2>&1 &
 
-
+/usr/bin/swayidle -w \
+        timeout 300 'wlopm --off \*' \
+        resume 'wlopm --on \*' >/dev/null 2>&1 &
 
 # xwayland dpi scale
 # echo "Xft.dpi: 140" | xrdb -merge #dpi缩放

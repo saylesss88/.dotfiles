@@ -2,7 +2,7 @@
 sort_by = "mtime"
 sort_reverse = true
 linemode = "size"
-opener = "/usr/sbin/helix"
+opener = "/usr/bin/helix"
 
 [preview]
 tab_size = 2

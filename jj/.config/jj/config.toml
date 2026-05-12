@@ -2,7 +2,8 @@
 name = "saylesss88"
 email = "saylesss87@proton.me"
 [ui]
-default-command = "log-recent"
+# default-command = "log-recent"
+default-command = "status"
 diff-editor = "gitpatch"
 
 [merge-tools.gitpatch]
